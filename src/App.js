@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
 
 const list = [
   {
@@ -15,28 +16,16 @@ const list = [
   { title: "How to lear Redux", description: "Just by doing and programming" },
 ];
 
-const options = [
-  { label: "Color Red", value: "red" },
-  { label: "Color Green", value: "green" },
-  { label: "Color Blue", value: "blue" },
-];
-
 const App = () => {
-  const [selected, setSelect] = useState(options[0]);
-
   return (
     <div>
       {
-        //<Accordion list={list} />}
+        //<Accordion list={list} />
       }
       {
         //<Search />
       }
-      <Dropdown
-        onSelectChange={setSelect}
-        selected={selected}
-        options={options}
-      />
+      <Translate />
     </div>
   );
 };
