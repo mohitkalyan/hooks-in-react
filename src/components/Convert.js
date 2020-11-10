@@ -1,6 +1,7 @@
-//  AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
+console.log(process.env);
 
 const Convert = ({ language, text }) => {
   const [translated, setTranslated] = useState("");
@@ -25,7 +26,7 @@ const Convert = ({ language, text }) => {
           params: {
             q: debauncedText,
             target: language.value,
-            key: "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM",
+            key: process.env.REACT_APP_KEY,
           },
         }
       );
